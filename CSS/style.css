@@ -17,6 +17,10 @@ p {
     margin-right: 10px;
 }
 
+.header{
+    background:red;
+}
+
 body {
     max-width: 1160px;
     margin: 0 auto;
