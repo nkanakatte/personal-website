@@ -1,0 +1,262 @@
+h1 {
+    font-family: sans-serif;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 28px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body {
+    max-width: 1160px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.nav {
+    display: flex;
+    margin-bottom: 1rem;
+    background: linear-gradient(to top, #b11b1b 0%, #8c1515 100%);
+}
+
+.menuItem {
+    font-size: 18px;
+    line-height: 1.5rem;
+    padding: .5rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menuItemSelected {
+    font-size: 18px;
+    line-height: 1.5rem;
+    padding: .5rem;
+    background: #580E0E;
+    color: #ffffff;
+}
+
+.section {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+.section-about {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+.section-background {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+.footer {
+    margin-top: 2rem;
+    border-top: .18rem solid #8c1515;
+    font-size: 12px;
+}
+
+.footerp {
+    font-size: 12px;
+    line-height: 1rem;
+}
+
+table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 16px;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #a7a7a7;
+    font-size: 100%;
+}
+
+tfoot {
+    background-color: #666666;
+    color: #dddddd;
+    font-size: 100%;
+}
+
+ul {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    line-height: 1.5rem;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    margin: auto;
+}
+
+.figimg {
+    width: auto;
+    height: auto;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+.container-column {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.container-image {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.print-line {
+    display: none;
+}
+
+.video {
+    width: 100%;
+}
+
+/*----------------------------------------Media queries for responsive styles--------------------------------------------*/
+
+/* Styles to handle tables in responsive mode */
+
+@media only screen and (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr, tfoot {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        margin: 0 0 1rem 0;
+    }
+    tr:nth-child(odd) {
+        background: #ccc;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        position: absolute;
+        content: attr(data-label);
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+    tfoot tr {
+        color: #000000;
+        background-color: #2d5372;
+    }
+}
+
+/* Styles to handle few images in mobile view */
+
+@media only screen and (max-width: 750px) {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .figimg {
+        width: auto;
+        height: auto;
+    }
+    .section-about {
+        display: flex;
+        flex-flow: column;
+    }
+    .profile-img {
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 400px;
+        height: auto;
+    }
+}
+
+/* ---------------------- Print Styles ----------------------------------------*/
+
+@media print {
+    .nav {
+        display: none;
+    }
+    body {
+        margin: 15px;
+        font-family: sans-serif;
+    }
+    a:after {
+        content: "( "attr(href)" )";
+    }
+    .figimg {
+        width: 300px;
+        height: auto;
+    }
+    .footer {
+        margin-top: 2rem;
+        border-top: .18rem solid #000000;
+        font-size: 12px;
+    }
+    section:empty {
+        border-top: .1rem solid #000000;
+        margin-bottom: 1rem;
+    }
+    .container-column-video {
+        display: none;
+    }
+}
