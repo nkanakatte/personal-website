@@ -281,7 +281,7 @@ img:hover {
 
 /* Styles to handle few images in mobile view */
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 414px) {
     .container {
         display: flex;
         justify-content: space-around;
