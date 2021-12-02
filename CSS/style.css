@@ -17,10 +17,6 @@ p {
     margin-right: 10px;
 }
 
-.header{
-    background:red;
-}
-
 body {
     max-width: 1160px;
     margin: 0 auto;
@@ -166,33 +162,96 @@ figcaption {
     width: 100%;
 }
 
+.formContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    border: 10px;
+}
+
+.formElement {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.socialBlock {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.buttonClass {
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: #8c1515;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 25px;
+    margin-left: 10px;
+
+}
+
+aside {
+    border-right: 1px solid #ededed;
+    background: #36c;
+    flex: 1 0 10%;
+    padding: 1rem;
+}
+
+.imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    width: 30%;
+    height: auto;
+    margin: 15px;
+    transition: transform 1s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
 /*----------------------------------------Media queries for responsive styles--------------------------------------------*/
 
 /* Styles to handle tables in responsive mode */
 
 @media only screen and (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
+
     /* Force table to not be like tables anymore */
     table, thead, tbody, th, td, tr, tfoot {
         display: block;
     }
+
     /* Hide table headers (but not display: none;, for accessibility) */
     thead tr {
         position: absolute;
         top: -9999px;
         left: -9999px;
     }
+
     tr {
         margin: 0 0 1rem 0;
     }
+
     tr:nth-child(odd) {
         background: #ccc;
     }
+
     td {
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;
         padding-left: 50%;
     }
+
     td:before {
         position: absolute;
         content: attr(data-label);
@@ -201,12 +260,22 @@ figcaption {
         padding-right: 10px;
         white-space: nowrap;
     }
+
     table td:last-child {
         border-bottom: 0;
     }
+
     tfoot tr {
         color: #000000;
         background-color: #2d5372;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 15px;
+        border: none;
+        transform: none;
     }
 }
 
@@ -218,19 +287,31 @@ figcaption {
         justify-content: space-around;
         flex-wrap: wrap;
     }
+
     .figimg {
         width: auto;
         height: auto;
     }
+
     .section-about {
         display: flex;
         flex-flow: column;
     }
+
     .profile-img {
         margin-left: 40px;
         margin-right: 40px;
         width: 400px;
         height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 15px;
+        border: none;
+        transform: none;
+
     }
 }
 
@@ -240,27 +321,34 @@ figcaption {
     .nav {
         display: none;
     }
+
     body {
         margin: 15px;
         font-family: sans-serif;
     }
+
     a:after {
         content: "( "attr(href)" )";
     }
+
     .figimg {
         width: 300px;
         height: auto;
     }
+
     .footer {
         margin-top: 2rem;
         border-top: .18rem solid #000000;
         font-size: 12px;
     }
+
     section:empty {
         border-top: .1rem solid #000000;
         margin-bottom: 1rem;
     }
+
     .container-column-video {
         display: none;
     }
+
 }

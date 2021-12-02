@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My Website - Naveen Kanakatte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Naveen Kanakatte</h1>
+        <section></section>
+        <nav class="nav">
+            <a href="./index.html" class="menuItem">About</a>
+            <a href="./background.html" class="menuItem">Background</a>
+            <a href="./experience.html" class="menuItem">Professional Experience</a>
+            <a href="./interests.html" class="menuItem">Interests</a>
+            <a href="./contact.html" class="menuItemSelected">Contact</a>
+        </nav>
+    </header>
+    <main class="main">
+        <h2>Contact Me</h2>
+        <p>Use the form below to submit any questions/comments to me. I will try to answer them as soon as i can.
+            Alternatively, you can also follow me on social media.</p>
+        <div class="formContainer">
+            <form action="https://contactform-project.000webhostapp.com/process-form.php" method="POST">
+                <div class="formElement">
+                    <label for="firstName">Name:&nbsp;</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <span id="error-firstname" class="error"></span>
+            
+                    <label for="lastName">Email:&nbsp;</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <span id="error-lastname" class="error"></span>
+              
+                    <label for="facilitator">Message:&nbsp;</label>
+                    <textarea id="message" name="message" rows="5" cols="33" required></textarea>
+                </div>
+                <div class="elementbtn">
+                    <button id="myButton" class="buttonClass" type="submit">Submit</button>
+                </div>
+
+            </form>
+            <div class="socialBlock">
+                <p>Follow Me</p> 
+                <a href="https://twitter.com/nkanakatte?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @nkanakatte</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a href="https://www.linkedin.com/in/naveenkanakatte" target="_new  ">LinkedIn</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footerp">© All rights reserved. No content or images, either in full or part can be reproduced without
+            explicit
+            permission
+            from the author. <a href="mailto:naveenkn1977@yahoo.com">Contact</a></p>
+    </footer>
+</body>
+
+</html>
