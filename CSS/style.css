@@ -278,3 +278,39 @@ img {
         background-color: #2d5372;
     }
 }
+
+/* Styles to handle few images in mobile view */
+
+@media only screen and (max-width: 414px) {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .figimg {
+        width: auto;
+        height: auto;
+    }
+
+    .section-about {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .profile-img {
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 400px;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 15px;
+        border: none;
+        transform: none;
+
+    }
+}
