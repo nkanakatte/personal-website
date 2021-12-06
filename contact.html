@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=61adb0a516dc510019237abd&product=inline-follow-buttons" async="async"></script>
 </head>
 
 <body>
@@ -29,16 +30,16 @@
         <div class="formContainer">
             <form action="https://contactform-project.000webhostapp.com/process-form.php" method="POST">
                 <div class="formElement">
-                    <label for="firstName">Name:&nbsp;</label>
-                    <input type="text" id="firstName" name="firstName" required>
+                    <label for="firstName" class="label">Name</label>
+                    <input type="text" id="firstName" class="input" name="firstName" >
                     <span id="error-firstname" class="error"></span>
             
-                    <label for="lastName">Email:&nbsp;</label>
-                    <input type="text" id="lastName" name="lastName" required>
+                    <label for="lastName" class="label">Email</label>
+                    <input type="text" id="lastName" class="input" name="lastName" >
                     <span id="error-lastname" class="error"></span>
               
-                    <label for="facilitator">Message:&nbsp;</label>
-                    <textarea id="message" name="message" rows="5" cols="33" required></textarea>
+                    <label for="facilitator" class="label">Message</label>
+                    <textarea id="message" name="message" class="input" rows="5" cols="33" ></textarea>
                 </div>
                 <div class="elementbtn">
                     <button id="myButton" class="buttonClass" type="submit">Submit</button>
@@ -46,9 +47,7 @@
 
             </form>
             <div class="socialBlock">
-                <p>Follow Me</p> 
-                <a href="https://twitter.com/nkanakatte?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @nkanakatte</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                <a href="https://www.linkedin.com/in/naveenkanakatte" target="_new  ">LinkedIn</a>
+                <div class="sharethis-inline-follow-buttons"></div>
             </div>
         </div>
     </main>
