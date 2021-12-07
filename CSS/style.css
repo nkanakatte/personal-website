@@ -189,9 +189,8 @@ figcaption {
 .socialBlock {
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
-    padding-right: 15px;
-    background: antiquewhite;
+    padding-top: 15px;
+    width:400px;
 }
 
 .buttonClass {
@@ -232,7 +231,7 @@ img {
 
 /* Styles to handle tables in responsive mode */
 
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (max-width: 450px){
 
 
     table, thead, tbody, th, td, tr, tfoot {
@@ -277,40 +276,29 @@ img {
         color: #000000;
         background-color: #2d5372;
     }
-}
-
-/* Styles to handle few images in mobile view */
-
-@media only screen and (max-width: 414px) {
-    .container {
-        display: flex;
-        justify-content: space-around;
+    .section-about {
         flex-wrap: wrap;
     }
-
-    .figimg {
-        width: auto;
-        height: auto;
-    }
-
-    .section-about {
-        display: flex;
-        flex-flow: column;
-    }
-
     .profile-img {
-        margin-left: 40px;
-        margin-right: 40px;
         width: 400px;
         height: auto;
     }
-
-    img {
-        width: 100%;
-        height: auto;
-        margin: 15px;
-        border: none;
-        transform: none;
-
+    .section-background {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+    .container {
+        display: block;
+    }
+    .formElement {
+        display: flex;
+        width: 95%;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .form{
+        width:100%;
     }
 }
