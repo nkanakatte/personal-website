@@ -9,11 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
     <script type="text/javascript" src="./JS/myJS.js" defer></script>
+    <script type="text/javascript" src="./JS/experience.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        window.onload = function fetchPositions() {}   
+    </script>
 
 </head>
 
-<body>
+<body onload="fetchPositions()">
     <header>
         <h1>Naveen Kanakatte</h1>
         <section></section>
@@ -44,7 +48,7 @@
                     <p>After 18 months i got the opportunity to work as a project Assistance at Indian Institute of
                         Science (<a href="https://iisc.ac.in/" class="a-general" target="_blank">IISc</a>), a famous and one of the top
                         educational and research institutes of the world. I was building an <a
-                            href="http://brahmi.sourceforge.net/" target="_blank">editor</a> for Kannada (a South Indian
+                            href="http://brahmi.sourceforge.net/" class="a-general" target="_blank">editor</a> for Kannada (a South Indian
                         Language), building websites and other solutions as part of a Government program to promote
                         Indian Languages in Information technology.</p>
                     <figure class="container"> <img src="/Assets/IISc.jpeg"
@@ -62,16 +66,7 @@
                         Iteamic in 2008) and later in 2013 joined Stanford University as a Software Architect/Project
                         Manager.</p>
                     <h2>Roles I have held</h2>
-                    <ul>
-                        <li><strong>Associate Director, Engineering Solutions</strong>, Stanford University Graduate
-                            School of Business, Sept 2016, to Present</li>
-                        <li><strong>Associate Director, Web production</strong>, Stanford University Graduate School of
-                            Business, Sept 2013 &ndash; Aug 2016</li>
-                        <li><strong>Software Project Manager/Technical Architect</strong>, Stanford University Graduate
-                            School of Business, Feb 2013 &ndash; Sept 2013</li>
-                        <li><strong>Software Engineer, Team Leader, Associate Project Manager, Delivery
-                                Manager</strong>, Ciber, Apr 2004 &ndash; Jan 2013</li>
-                    </ul>
+                    <div id="responsedata"></div>
                     <p>I have primarily been a Java programmer building enterprise applications using Spring and
                         Hibernate. However, over the years, i have also added PHP, Drupal and Salesforce into my
                         technical basket. Here is a summary of my technical skills.</p>
