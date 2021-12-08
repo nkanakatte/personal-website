@@ -277,9 +277,10 @@ and (max-width: 501px){
     }
     .section-about {
         flex-wrap: wrap;
+        gap:0px
     }
     .profile-img {
-        width: 400px;
+        width: 90%;
         height: auto;
     }
     .section-background {
@@ -300,4 +301,13 @@ and (max-width: 501px){
     .form{
         width:100%;
     }
-}
+    .figimg {
+        width: 275px;
+        height: auto;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    li{
+        font-size:14px;
+    }
