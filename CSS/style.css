@@ -231,9 +231,8 @@ img {
 
 /* Styles to handle tables in responsive mode */
 
-@media only screen and (max-width: 450px){
-
-
+@media only screen and (min-width: 320px) 
+and (max-width: 501px){
     table, thead, tbody, th, td, tr, tfoot {
         display: block;
     }
