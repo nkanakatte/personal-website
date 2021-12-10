@@ -9,7 +9,14 @@ h2 {
     margin-left: 10px;
     margin-bottom: 10px;
 }
-
+h3 {
+    font-family: sans-serif;
+    margin-left: 25px;
+}
+h4 {
+    font-family: sans-serif;
+    margin-left: 25px;
+}
 p {
     font-size: 16px;
     line-height: 1.5rem;
@@ -190,7 +197,8 @@ figcaption {
     display: flex;
     flex-direction: column;
     padding-top: 15px;
-    width: 400px;
+    padding-bottom: 15px;
+    padding-left: 10px;
 }
 
 .buttonClass {
@@ -203,7 +211,7 @@ figcaption {
     margin-top: 10px;
     margin-right: 25px;
     margin-left: 10px;
-
+    margin-bottom: 10px;
 }
 
 aside {
