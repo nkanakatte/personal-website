@@ -220,9 +220,11 @@ aside {
 }
 
 img {
-    width: 30%;
+    width: 60%;
     height: auto;
-    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .navbar {
@@ -273,7 +275,6 @@ img {
     padding: .5rem;
     background: #580E0E;
     color: #ffffff;
-
 }
 
 .nav-link:hover {
@@ -286,20 +287,107 @@ img {
     color: #482ff7;
 }
 
-
-
 a {
     text-decoration: none;
     color: #ffffff;
 }
+
+.activeMenu {
+    border-bottom: 3px solid;
+}
+
 .a-general {
     text-decoration: underline;
     color: blue;
 }
+
 .error {
     font-size: 13px;
     color: red;
 }
+
+/*Slideshow*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dotposition {
+    margin-left: 43%;
+    margin-top: 15px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 /*----------------------------------------Media queries for responsive styles--------------------------------------------*/
 
 /* Styles to handle tables in Phones mode */
@@ -395,7 +483,7 @@ a {
 
     .nav-menu {
         position: fixed;
-        left:-100%;
+        left: -100%;
         top: 8rem;
         flex-direction: column;
         background-color: #fff;
@@ -449,13 +537,14 @@ a {
         width: 340px;
         height: auto;
     }
+
     li {
         font-size: 14px;
     }
 
     .nav-menu {
         position: fixed;
-        left:-100%;
+        left: -100%;
         top: 8rem;
         flex-direction: column;
         background-color: #fff;
