@@ -26,3 +26,21 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+document.body.addEventListener( "keydown", function( e ) {
+  var code = e.keyCode;
+  var evt = new Event( "click" );
+  console.log(code);
+  if( code == 13) {
+    console.log(document.activeElement.id);
+    if(document.activeElement.id=="span1"){
+      currentSlide(1);
+    }
+    if(document.activeElement.id=="span2"){
+      currentSlide(2);
+    }
+    if(document.activeElement.id=="span3"){
+      currentSlide(3);
+    }
+  }
+}, false);

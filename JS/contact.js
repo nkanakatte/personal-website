@@ -10,12 +10,12 @@ myButtonElement.addEventListener('click', function (event) {
     else {
         document.getElementById('error-firstname').innerHTML = "";
     }
-    if (!validateInput(document.getElementById('email'))) {
-        document.getElementById('error-email').innerHTML = " Email " + errormsg;
-        event.preventDefault();
+    if (validateEmail(document.getElementById('email'))) {
+        document.getElementById('error-email').innerHTML = "";
     }
     else {
-        document.getElementById('error-email').innerHTML = "";
+        document.getElementById('error-email').innerHTML = " Please enter a valid Email.";
+        event.preventDefault();
     }
     if (!validateMessage(document.getElementById('message'))) {
         document.getElementById('error-message').innerHTML = " Message cannot be empty.";
@@ -46,6 +46,23 @@ function validateInput(enteredVal) {
 function validateMessage(enteredVal) {
     // Validating if the value is not null and greater than 1 character
     if (enteredVal.value.length < 1 || enteredVal.value === "") {
+        return false;
+    }
+    else{
+    return true;
+}
+}
+
+function validateEmail(inputText) {
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const email=inputText.value;
+    if (email.match(mailformat)) {
+        //document.form1.text1.focus();
+        console.log(inputText.value);
+        return true;
+    }
+    else {
+        //document.form1.text1.focus();
         return false;
     }
 }
