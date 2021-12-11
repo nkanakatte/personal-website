@@ -27,6 +27,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+/* Method to handle keboard navigation for slideshow */
 document.body.addEventListener( "keydown", function( e ) {
   var code = e.keyCode;
   var evt = new Event( "click" );

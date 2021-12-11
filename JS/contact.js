@@ -48,21 +48,19 @@ function validateMessage(enteredVal) {
     if (enteredVal.value.length < 1 || enteredVal.value === "") {
         return false;
     }
-    else{
-    return true;
-}
+    else {
+        return true;
+    }
 }
 
+/* Validating if the entered email is correct. */
 function validateEmail(inputText) {
-    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    const email=inputText.value;
-    if (email.match(mailformat)) {
-        //document.form1.text1.focus();
-        console.log(inputText.value);
+    var emailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const email = inputText.value;
+    if (email.match(emailformat)) {
         return true;
     }
     else {
-        //document.form1.text1.focus();
         return false;
     }
 }
