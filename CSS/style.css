@@ -9,14 +9,17 @@ h2 {
     margin-left: 10px;
     margin-bottom: 10px;
 }
+
 h3 {
     font-family: sans-serif;
     margin-left: 25px;
 }
+
 h4 {
     font-family: sans-serif;
     margin-left: 25px;
 }
+
 p {
     font-size: 16px;
     line-height: 1.5rem;
@@ -51,11 +54,13 @@ body {
     background: #580E0E;
     color: #ffffff;
 }
-.resumeContainer{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+
+.resumeContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 .section {
     display: flex;
     gap: 15px;
@@ -111,7 +116,7 @@ th {
 
 tfoot {
     background-color: #666666;
-    color: #dddddd;
+    color:black;
     font-size: 100%;
 }
 
@@ -204,6 +209,7 @@ figcaption {
     padding-bottom: 15px;
     padding-left: 10px;
 }
+
 .buttonResume {
     font-size: 15px;
     font-weight: normal;
@@ -217,6 +223,7 @@ figcaption {
     margin-bottom: 10px;
     cursor: pointer;
 }
+
 .buttonClass {
     font-size: 1rem;
     font-weight: normal;
