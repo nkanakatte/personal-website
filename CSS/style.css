@@ -51,7 +51,11 @@ body {
     background: #580E0E;
     color: #ffffff;
 }
-
+.resumeContainer{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
 .section {
     display: flex;
     gap: 15px;
@@ -200,7 +204,19 @@ figcaption {
     padding-bottom: 15px;
     padding-left: 10px;
 }
-
+.buttonResume {
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #8c1515;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 .buttonClass {
     font-size: 1rem;
     font-weight: normal;

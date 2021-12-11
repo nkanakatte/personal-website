@@ -13,13 +13,12 @@
         async="async"></script>
     <script type="text/javascript" src="./JS/myJS.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
     <div id="app">
         <header>
-            <h1>{{ courseName }}</h1>
+            <h1>{{ myName }}</h1>
             <section></section>
             <nav class="navbar">
                 <ul class="nav-menu">
@@ -39,7 +38,7 @@
         </header>
         <main class="main">
             <section class="section-about">
-                <img src="/Assets/Naveen.jpg" alt="Headshot of Naveen" class="profile-img">
+                <img v-bind:src="profileImage" alt="Headshot of Naveen" class="profile-img">
                 <p>Greetings! I am Naveen Kanakatte, currently living in the San Francisco Bay area with my wife and two
                     adorable Daughters. I am working as a Software Engineering Manager at a Higher Education
                     institution, where iIget to work with well-known, accomplished Faculty. Along with them, I build
@@ -50,15 +49,17 @@
         </main>
         <footer class="footer">
             <p class="footerp">© All rights reserved. No content or images, either in full or part can be reproduced
-                without explicit permission from the author. <a href="mailto:naveenkn1977@yahoo.com" class="a-general">Contact</a></p>
+                without explicit permission from the author. <a href="mailto:naveenkn1977@yahoo.com"
+                    class="a-general">Contact</a></p>
         </footer>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                courseName: 'CS601: Web Application Development'
+                myName: 'Naveen Kanakatte',
+                profileImage: './Assets/Naveen.jpg'
             }
         })
     </script>
