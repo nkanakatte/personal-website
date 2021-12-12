@@ -56,7 +56,7 @@ function validateMessage(enteredVal) {
 
 /* Validating if the entered email is correct. */
 function validateEmail(inputText) {
-    var emailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const email = inputText.value;
     if (email.match(emailformat)) {
         return true;
