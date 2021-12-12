@@ -35,11 +35,12 @@ function validateInput(enteredVal) {
         return false;
     }
     // Validating if the entered text is Alpha only
-    let letters = /^[A-Za-z]+$/;
+    let letters = /^[a-zA-Z ]*$/;
     if (enteredVal.value.match(letters)) {
         return true;
     }
     else {
+        console.log('here');
         return false;
     }
 }
