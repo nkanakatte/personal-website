@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My Website - Naveen Kanakatte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=61adb0a516dc510019237abd&product=inline-follow-buttons"
+        async="async"></script>
+    <script type="text/javascript" src="./JS/myJS.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div id='app'>
+        <header>
+            <h1>{{ myName }}</h1>
+            <section></section>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"> <a href="./index.html" class="navlink activeMenu">About</a></li>
+                    <li class="nav-item"> <a href="./background.html" class="navlink">Background</a></li>
+                    <li class="nav-item"> <a href="./experience.html" class="navlink">Professional Experience</a></li>
+                    <li class="nav-item"> <a href="./interests.html" class="navlink">Interests</a></li>
+                    <li class="nav-item"> <a href="./resume.html" class="navlink">Resume</a></li>
+                    <li class="nav-item"> <a href="./contact.html" class="navlink">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <table border='1' width='80%' style='border-collapse: collapse;'>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Created Date</th>
+                <th></th>
+            </tr>
+
+            <!-- Update/Delete -->
+            <tr v-for='(message,index) in messages'>
+                <td><input type='text' v-model='message.name'></td>
+                <td><input type='text' v-model='message.email'></td>
+                <td><input type='text' v-model='message.message'></td>
+                <td><input type='text' v-model='message.date_created'></td>
+                <td><input type='button' value='Delete' @click='deleteRecord(index,message.id)'></td>
+            </tr>
+        </table>
+
+    </div>
+    <footer class="footer">
+        <p class="footerp">© All rights reserved. No content or images, either in full or part can be reproduced
+            without explicit permission from the author. <a href="./contact.html" class="a-download">Contact</a></p>
+        <p class="pCSSValidator">
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Valid CSS!" />
+            </a>
+        </p>
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./JS/main.js"></script>
+</body>
+
+</html>
