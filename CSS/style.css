@@ -535,8 +535,8 @@ a {
 
     h1 {
         font-family: sans-serif;
-        font-size: 36px;
-        margin-left: 3px;
+        font-size: 32px;
+        margin-left: 10px;
     }
 
     li {
@@ -600,6 +600,12 @@ a {
 
 /*Styles for tablet*/
 @media only screen and (min-width: 502px) and (max-width: 1079px) {
+    h1 {
+        font-family: sans-serif;
+        font-size: 32px;
+        margin-left: 10px;
+    }
+
     .figimg {
         width: 340px;
         height: auto;
