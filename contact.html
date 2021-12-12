@@ -23,7 +23,7 @@
 <body>
     <div id="app">
         <header>
-            <h1>{{ myName }}</h1>
+            <h1 v-cloak>{{ myName }}</h1>
             <section></section>
             <nav class="navbar">
                 <ul class="nav-menu">
@@ -65,8 +65,8 @@
                         <span class="remainingchars">{{ maxLength - value.length}} / {{ maxLength }}</span>
                     </div>
                     <div class="elementbtn">
-                        <button id="myButton" class="buttonClass" @mouseover="hover = true"
-                        @mouseleave="hover = false" :class="{ hoverButton: hover }" type="submit">Submit</button>
+                        <button id="myButton" class="buttonClass" @mouseover="hover = true" @mouseleave="hover = false"
+                            :class="{ hoverButton: hover }" type="submit">Submit</button>
                     </div>
                 </form>
             </div>

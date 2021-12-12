@@ -3,6 +3,10 @@ h1 {
     font-size: 36px;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 h2 {
     font-family: sans-serif;
     font-size: 28px;
@@ -528,14 +532,16 @@ a {
     h2 {
         font-size: 24px;
     }
+
     h1 {
         font-family: sans-serif;
         font-size: 36px;
         margin-left: 3px;
     }
+
     li {
         font-size: 14px;
-        margin-right:20px;
+        margin-right: 20px;
     }
 
     .nav-menu {
@@ -586,8 +592,9 @@ a {
         text-decoration: none;
         color: black
     }
-    .buttonResume{
-        display:none;
+
+    .buttonResume {
+        display: none;
     }
 }
 
@@ -698,6 +705,7 @@ a {
         font-size: 14px;
         margin-left: 2px;
     }
+
     a:after {
         content: "( "attr(href)" )";
     }
