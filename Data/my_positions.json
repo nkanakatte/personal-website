@@ -1,0 +1,30 @@
+{
+  "my_job_positions": {
+    "positions": [
+      {
+        "company": "Stanford University Graduate School of Business",
+        "title": "Associate Director, Engineering Solutions",
+        "fromYear": "Sept 2016",
+        "endYear": "Present"
+      },
+      {
+        "company": "Stanford University Graduate School of Business",
+        "title": "Associate Director, Web production",
+        "fromYear": "Sept 2013",
+        "endYear": "Aug 2016"
+      },
+      {
+        "company": "Stanford University Graduate School of Business",
+        "title": "Software Project Manager/Technical Architect",
+        "fromYear": "Feb 2013",
+        "endYear": "Sept 2016"
+      },
+      {
+        "company": "Ciber Inc",
+        "title": "Software Engineer, Team Leader, Associate Project Manager, Delivery Manager",
+        "fromYear": "April 2004",
+        "endYear": "Jan 2013"
+      }
+    ]
+  }
+}
