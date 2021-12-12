@@ -31,7 +31,6 @@ function showSlides(n) {
 document.body.addEventListener( "keydown", function( e ) {
   var code = e.keyCode;
   var evt = new Event( "click" );
-  console.log(code);
   if( code == 13) {
     console.log(document.activeElement.id);
     if(document.activeElement.id=="span1"){
