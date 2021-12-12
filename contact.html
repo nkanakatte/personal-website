@@ -62,10 +62,11 @@
                         <textarea v-model='value' id="message" name="message" class="input" rows="5" cols="33"
                             :maxlength="maxLength"></textarea>
                         <span id="error-message" class="error"></span>
-                        <span>{{ maxLength - value.length}} / {{ maxLength }}</span>
+                        <span class="remainingchars">{{ maxLength - value.length}} / {{ maxLength }}</span>
                     </div>
                     <div class="elementbtn">
-                        <button id="myButton" class="buttonClass" type="submit">Submit</button>
+                        <button id="myButton" class="buttonClass" @mouseover="hover = true"
+                        @mouseleave="hover = false" :class="{ hoverButton: hover }" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -76,8 +77,8 @@
         </main>
         <footer class="footer">
             <p class="footerp">© All rights reserved. No content or images, either in full or part can be reproduced
-                without explicit permission from the author. <a href="./contact.html" class="a-general">Contact</a></p>
-            <p>
+                without explicit permission from the author. <a href="./contact.html" class="a-download">Contact</a></p>
+            <p class="pCSSValidator">
                 <a href="http://jigsaw.w3.org/css-validator/check/referer">
                     <img style="border:0;width:88px;height:31px"
                         src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />

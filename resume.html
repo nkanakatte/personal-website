@@ -23,7 +23,7 @@
 <body onload="fetchPositions()">
     <div id="app">
         <header>
-            <h1>{{ myName }}</h1>
+            <h1>{{ myName }} <br><p class="website">{{website}}</p></h1>
             <section></section>
             <nav class="navbar">
                 <ul class="nav-menu">
@@ -45,7 +45,8 @@
             <section>
                 <div class="resumeContainer">
                     <h2>Resume</h2>
-                    <button id="myButton" class="buttonResume" @click="printWindow()" type="submit">Print
+                    <button id="myButton" class="buttonResume" @click="printWindow()"  @mouseover="hover = true"
+                    @mouseleave="hover = false" :class="{ hoverButton: hover }" type="submit">Print
                         Resume</button>
                 </div>
                 <p> Accomplished software professional with over 20 years of software development experience working in
@@ -63,9 +64,11 @@
                         {{degree.year}}</li>
                 </ul>
                 <hr>
+
                 <h2>Roles I have held</h2>
                 <div id="positiondata"></div>
                 <hr>
+                
                 <h2>Things I know</h2>
                 <ul>
                     <li><strong>CRM</strong> Salesforce Sales Cloud, Salesforce Marketing Cloud</li>
@@ -88,6 +91,21 @@
                     <li>Attended Stanford Manager Academy in 2013</li>
                     <li>Served as Assessment Team Member for CMMI level 3 Certification</li>
                 </ul>
+                <div class="badgecontainer">
+                    <div v-if="displayAWSBadge===true">
+                        <div data-iframe-width="150" data-iframe-height="270"
+                            data-share-badge-id="dd315512-e315-4645-a162-02ac8bb7bed6"
+                            data-share-badge-host="https://www.credly.com"></div>
+                        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    </div>
+                    <div v-if="displayPMIBadge===true">
+                        <div data-iframe-width="150" data-iframe-height="270"
+                            data-share-badge-id="1c7db50f-b83a-4232-be7d-c8b012499987"
+                            data-share-badge-host="https://www.credly.com"></div>
+                        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+                    </div>
+                </div>
                 <hr>
 
                 <h2>Experience Summary</h2>
@@ -196,14 +214,14 @@
                         J2EE, Struts and related technologies.</li>
                     <li>Responsible for code deployments and helping account manager with technical documentation.</li>
                 </ul>
-                <p><a href="./Assets/Files/Naveen_Kanakatte_2021.pdf" download class="a-general">Download my Resume</a>
+                <p><a href="./Assets/Files/Naveen_Kanakatte_2021.pdf" download class="a-download">Download my Resume</a>
                 </p>
             </section>
         </main>
         <footer class="footer">
             <p class="footerp">© All rights reserved. No content or images, either in full or part can be reproduced
-                without explicit permission from the author. <a href="./contact.html" class="a-general">Contact</a></p>
-            <p>
+                without explicit permission from the author. <a href="./contact.html" class="a-download">Contact</a></p>
+            <p class="pCSSValidator">
                 <a href="http://jigsaw.w3.org/css-validator/check/referer">
                     <img style="border:0;width:88px;height:31px"
                         src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
@@ -212,7 +230,7 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/javascript" src="./JS/main.js"></script>
+    <script type="text/javascript" src="./JS/main.js" defer></script>
 </body>
 
 </html>

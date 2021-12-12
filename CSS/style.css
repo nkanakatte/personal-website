@@ -10,6 +10,10 @@ h2 {
     margin-bottom: 10px;
 }
 
+.website {
+    display: none;
+}
+
 h3 {
     font-family: sans-serif;
     margin-left: 25px;
@@ -37,6 +41,15 @@ body {
     display: flex;
     margin-bottom: 1rem;
     background: linear-gradient(to top, #b11b1b 0%, #8c1515 100%);
+}
+
+.badgecontainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2%;
+    margin-top: 20px;
+    margin-left: 25px;
+    justify-content: flex-start;
 }
 
 .menuItem {
@@ -116,7 +129,7 @@ th {
 
 tfoot {
     background-color: #666666;
-    color:white;
+    color: white;
     font-size: 100%;
 }
 
@@ -237,6 +250,10 @@ figcaption {
     margin-bottom: 10px;
 }
 
+.remainingchars {
+    margin-top: 5px;
+}
+
 aside {
     border-right: 1px solid #ededed;
     background: #36c;
@@ -327,7 +344,19 @@ a {
     border-bottom: 3px solid;
 }
 
+.hoverButton {
+    background: #a4a8a7;
+    color: black;
+    cursor: pointer;
+
+}
+
 .a-general {
+    text-decoration: underline;
+    color: blue;
+}
+
+.a-download {
     text-decoration: underline;
     color: blue;
 }
@@ -612,5 +641,56 @@ a {
     a {
         text-decoration: none;
         color: black
+    }
+}
+
+/*-----------------Print Styles-----------------*/
+@media print {
+    body {
+        margin: 15px;
+        font-family: sans-serif;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .buttonResume {
+        display: none;
+    }
+
+    .a-download {
+        display: none;
+    }
+
+    h1 {
+        border-bottom: 2px solid;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+
+    h2 {
+        font-family: sans-serif;
+        font-size: 28px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .pCSSValidator {
+        display: none;
+    }
+
+    .website {
+        display: inline;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        margin-left: 2px;
+    }
+    a:after {
+        content: "( "attr(href)" )";
     }
 }
