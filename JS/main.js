@@ -25,18 +25,6 @@ var app = new Vue({
         printWindow: function () {
             window.print();
         },
-        deleteRecord: function (index, id) {
-            axios.post("https://contactform-project.000webhostapp.com/deleteRecord.php", {
-                id: id
-            })
-                .then(function (response) {
-                    app.messages.splice(index, 1);
-                    console.log(response.data);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        }
     },
     created() {
         axios.get('https://contactform-project.000webhostapp.com/listRecords.php')
