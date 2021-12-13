@@ -519,7 +519,13 @@ a {
         width: 90%;
         height: auto;
     }
-
+    img {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
     h2 {
         font-size: 24px;
     }
@@ -649,7 +655,13 @@ a {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-
+    img {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
     a {
         text-decoration: none;
         color: black
